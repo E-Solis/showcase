@@ -1,0 +1,19 @@
+.banner{
+    background-color: #24292e;
+    display: block;
+    padding: 0;
+    height: 64px;
+    box-sizing: border-box;
+    position: fixed;
+    width: 99%;
+    z-index: 9997;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,.3);
+    color: white;
+    }
+
+.b-text{
+    color: white;
+    line-height: center;
+    font-size: medium;
+    
+}
