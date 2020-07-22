@@ -11,10 +11,16 @@
 
 .header{
     grid-area: header;
-    background-color: lightseagreen
 }
 
 .body {
     grid-area: content;
-    background-color: red;
+    background-color: #444a50;
+
 }
+
+.ui-carousel-items-content {
+    overflow: hidden;
+    width: 1400px !important;
+}
+

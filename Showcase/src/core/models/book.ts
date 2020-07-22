@@ -1,10 +1,16 @@
+export interface BookResponse{
+    items: Book[];
+    kind: string;
+    totalItems: number;
+}
+
 export interface Book{
     kind : string;
     id: string;
     etag: string;
     selfLink: string;
     volumeInfo: VolumeInfo;
-    salesInfo: SalesInfo;
+    saleInfo: SaleInfo;
     accessInfo: AccessInfo;
     searchInfo: SearchInfo;
 }
@@ -28,6 +34,7 @@ export interface VolumeInfo{
     previewLink: string;
     infoLink: string;
     canonicalVolumeLink: string;
+    language: string;
 
 }
 
@@ -52,7 +59,7 @@ export interface ImageLinks{
     thumbnail: string;
 }
 
-export interface SalesInfo{
+export interface SaleInfo{
     country: string;
     saleability: string;
     isEbook: boolean;
