@@ -1,1 +1,32 @@
-<p-menubar [model]="items"></p-menubar>
+<div class="book-container">
+
+    <div class="search">
+        <app-book-search (booksEvent)="receiveBooks($event)"></app-book-search>
+    </div>
+
+    <div class="book-content" *ngIf="[books]">
+        <p-carousel [value]="books" [numVisible]="3" [numScroll]="3" [circular]="false">
+            <ng-template let-book pTemplate="item">
+                <div class="book-details" *ngIf="[book]">
+                    <div class="p-grid p-nogutter">
+                        <div class="p-col-8" *ngIf="[book.volumeInfo.imageLinks.smallThumbnail]">
+                            <!-- {{book.volumeInfo.imageLinks.thumbnail}} -->
+                            <img src={{book.volumeInfo.imageLinks.smallThumbnail}}
+                                style="width:128px;height:180px;border-style: solid;" />
+                        </div>
+                        <div class="p-col-8 book-data">
+                            <div class="book-title">{{book.volumeInfo.title}}</div>
+                            <div class="book-subtitle">{{book.volumeInfo.authors}} | {{book.volumeInfo.publishedDate}}
+                            </div>
+                            <div>
+                                <p-button label="Details"></p-button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </ng-template>
+        </p-carousel>
+    </div>
+
+
+</div>
