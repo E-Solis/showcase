@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, ElementRef, SimpleChanges, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { BookService } from 'src/core/services/book.service';
 import { Subject } from 'rxjs';
 import { debounceTime } from 'rxjs/operators';
@@ -20,7 +20,7 @@ export class BookSearchComponent implements OnInit {
 
   ngOnInit(): void {
     this.subject.pipe(
-      debounceTime(200)
+      debounceTime(300)
     ).subscribe(searchTextValue => {
       this.handleSearch(searchTextValue);
     });
@@ -31,7 +31,6 @@ search(searchValue: string){
 }
 
 handleSearch(searchValue: string){
-
   this.bookService.getBooks(searchValue).subscribe((val) => {
     this.bookResponse = val;
     this.booksEvent.emit(this.bookResponse.items);

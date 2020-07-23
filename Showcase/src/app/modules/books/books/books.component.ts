@@ -1,8 +1,5 @@
-import { Component, OnInit, Input, ViewChild } from '@angular/core';
-import { MenuItem } from 'primeng/api';
+import { Component, OnInit } from '@angular/core';
 import { Book } from '../../../../core/models/book'
-import { BookService } from '../../../../core/services/book.service'
-import { BookSearchComponent } from '../book-search/book-search.component';
 
 @Component({
   selector: 'app-books',
@@ -16,11 +13,24 @@ export class BooksComponent implements OnInit {
 
   books: Book[];
 
+  book: Book;
+
+  displayModal: boolean;
+
   ngOnInit() {
   }
 
   receiveBooks($event){
     this.books = $event;
   }
+
+  showModalDialog(book: Book) {
+    this.book = book;
+    this.displayModal = true;
+}
+
+updateModal($event){
+  this.displayModal = false;
+}
 
 }
