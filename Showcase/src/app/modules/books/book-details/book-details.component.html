@@ -1,0 +1,11 @@
+<p-dialog header={{book.volumeInfo.title}} [(visible)]="displayModal" [modal]="true" [style]="{width: '50vw'}"
+    [baseZIndex]="10000" [draggable]="false" [resizable]="false">
+    <a>
+        <img src="{{book.volumeInfo.imageLinks.smallThumbnail}}" class="center" />
+    </a>
+    <p>{{book.volumeInfo.description}}</p>
+
+    <p-footer>
+        <button type="button" pButton icon="pi pi-times" (click)="modalChange(false)" label="Close"></button>
+    </p-footer>
+</p-dialog>

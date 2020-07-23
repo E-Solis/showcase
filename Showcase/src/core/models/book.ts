@@ -16,6 +16,7 @@ export interface Book{
 }
 
 export interface VolumeInfo{
+    averageRating: string;
     title: string;
     authors: string[];
     publisher: string;

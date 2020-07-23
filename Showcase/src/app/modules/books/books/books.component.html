@@ -10,7 +10,6 @@
                 <div class="book-details" *ngIf="[book]">
                     <div class="p-grid p-nogutter">
                         <div class="p-col-8" *ngIf="[book.volumeInfo.imageLinks.smallThumbnail]">
-                            <!-- {{book.volumeInfo.imageLinks.thumbnail}} -->
                             <img src={{book.volumeInfo.imageLinks.smallThumbnail}}
                                 style="width:128px;height:180px;border-style: solid;" />
                         </div>
@@ -19,7 +18,7 @@
                             <div class="book-subtitle">{{book.volumeInfo.authors}} | {{book.volumeInfo.publishedDate}}
                             </div>
                             <div>
-                                <p-button label="Details"></p-button>
+                                <p-button label="Details" (click)="showModalDialog(book)"></p-button>
                             </div>
                         </div>
                     </div>
@@ -27,6 +26,8 @@
             </ng-template>
         </p-carousel>
     </div>
+
+<app-book-details [displayModal]="displayModal" (modalEvent)="updateModal($event)" [book]="book"></app-book-details>
 
 
 </div>

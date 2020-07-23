@@ -11,13 +11,20 @@ import { ButtonModule } from 'primeng/button';
 import { InputTextModule } from 'primeng/inputtext';
 import { BookSearchComponent } from './modules/books/book-search/book-search.component';
 import { HttpClientModule } from '@angular/common/http';
+import { BookDetailsComponent } from './modules/books/book-details/book-details.component';
+import { DialogModule } from 'primeng/dialog';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { StarRatingModule } from 'angular-star-rating';
+
+
 
 @NgModule({
   declarations: [
     AppComponent,
     BooksComponent,
     HeaderComponent,
-    BookSearchComponent
+    BookSearchComponent,
+    BookDetailsComponent
   ],
   imports: [
     BrowserModule,
@@ -26,7 +33,10 @@ import { HttpClientModule } from '@angular/common/http';
     CarouselModule,
     ButtonModule,
     InputTextModule,
-    HttpClientModule
+    HttpClientModule,
+    DialogModule,
+    BrowserAnimationsModule,
+    StarRatingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
