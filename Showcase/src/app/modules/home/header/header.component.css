@@ -12,7 +12,10 @@
     }
 
 .banner-text{
-    color: white;
-    font-size: medium;
-    
-}
+  height: auto;
+  margin: 0 auto;
+  padding: 10px;
+  position: relative;
+  margin-top: 12px;  
+  font-size: large;
+}  

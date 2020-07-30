@@ -1,5 +1,5 @@
-<p-dialog header={{book.volumeInfo.title}} [(visible)]="displayModal" [modal]="true" [style]="{width: '50vw'}"
-    [baseZIndex]="10000" [draggable]="false" [resizable]="false">
+<p-dialog *ngIf="book != undefined" header={{book.volumeInfo.title}} [(visible)]="displayModal" [modal]="true" [style]="{width: '50vw'}"
+    [baseZIndex]="10000" [draggable]="false" [resizable]="false" [closable]="false">
     <a>
         <img src="{{book.volumeInfo.imageLinks.smallThumbnail}}" class="center" />
     </a>

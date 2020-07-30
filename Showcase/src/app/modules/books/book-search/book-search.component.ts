@@ -31,11 +31,18 @@ search(searchValue: string){
 }
 
 handleSearch(searchValue: string){
+  if(searchValue.length > 0){
   this.bookService.getBooks(searchValue).subscribe((val) => {
     this.bookResponse = val;
     this.booksEvent.emit(this.bookResponse.items);
-  })
+  })}
+  else{
+    this.booksEvent.emit(null);
+  }
+
 
 }
+
+
 
 }
