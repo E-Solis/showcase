@@ -48,11 +48,6 @@
 .book-data button:first-child {
     margin-left: 0;
 }
-.carousel-demo .ui-carousel.custom-carousel .ui-carousel-dot-icon {
-    width: 16px !important;
-    height: 16px !important;
-    border-radius: 50%;
-}
 .book-details  {
     margin-left: 0.6em;
     height: 445px;
@@ -60,4 +55,10 @@
 .book-details  {
     margin-right: 0.6em;
 }
-
+.book-background{
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
+  opacity: 0.5;
+}
